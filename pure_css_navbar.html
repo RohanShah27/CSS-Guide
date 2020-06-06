@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>Navbar</title>
+        <style>
+        :root{
+          --white_color:white;
+        }
+        body {
+          
+            user-select: none;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: var(--white_color)
+}
+
+/* header */
+
+.header {
+  background-color: #f39c12;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  /* z-index: 3; */
+  
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #f39c12;
+}
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 30px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header .options a{ 
+  /* margin-top:2px; */
+  margin:2px 3px;
+    display:block;
+    float:left;
+    font-size:18px;
+    padding:15px 15px;
+    text-decoration: none;
+    border:1px solid white;
+    border-radius:8px;
+}
+.header .options a:active{
+    color:#f39c12;
+    background-color: white;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  /* display: inline-block; */
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .4s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: ' ';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+  /* to hide the check box button */
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 440px;
+  /* Height for the actual main menu */
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent; 
+  /* To remove the middle span when button is checked */
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.search-bar{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border:none;
+    height:20px;
+    padding:10px;
+}
+.search-bar:focus{
+    outline:none;
+}
+.search-button{
+border:none;
+height:20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.search-button:focus,
+.search-button:active{
+    outline:none;
+}
+
+@media (min-width: 993px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 15px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="" class="logo">Crickstrait</a>
+            <div class="options"> 
+              <a >Men</a>
+              <a >Women</a>
+
+            </div>
+            <!-- <a class="options">Men</a>
+            <a class="options">Women</a> -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                
+            <ul class="menu">
+              <li><a href="#work">Rankings</a></li>
+              <li><a href="#about">Matches</a></li>
+              <li><a href="#careers">Teams</a></li>
+              <li><a href="#contact">Players</a></li>
+              <li><a><input class="search-bar" type="text"/><button class="search-button">O</li></a>
+              <li><a href="#contact">Login</a></li>
+            </ul>
+          </header>
+    </body>
+</html>

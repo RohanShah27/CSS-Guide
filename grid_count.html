@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        width: 90%;
+        margin: 50px auto;
+        /* border: 1px solid black; */
+        text-align: center;
+        color: white;
+        display: grid;
+        grid-template-rows: 60px 100px 200px repeat(1, 2fr) 60px;
+        grid-template-columns: 250px repeat(2, 1fr) 250px;
+        grid-gap: 10px;
+      }
+
+      .div3 .bottom {
+        text-align: justify;
+        display: block;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        /* left: 50%; */
+        top: 50%;
+        position: absolute;
+        background-color: white;
+        color: black;
+        /* padding-left: 20px;
+        padding-right: 20px; */
+      }
+
+      .div1 {
+        border-radius: 8px;
+        background: red;
+        grid-column: 1/ -1;
+      }
+      .div2 {
+        border-radius: 8px;
+
+        background: blue;
+        grid-row: 2/4;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .div2::-webkit-scrollbar {
+        display: none;
+      }
+      .div2:hover::-webkit-scrollbar {
+        display: scroll;
+      }
+      .div3 {
+        border-radius: 8px;
+        background: green;
+        height: auto;
+        grid-row: 2/4;
+        grid-column: 2/4;
+      }
+      figure {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+      }
+      .div4 {
+        border-radius: 8px;
+
+        background: blue;
+        /* grid-row: 4/10; */
+        grid-column: 4/-1;
+        height: auto;
+      }
+      .div5 {
+        border-radius: 8px;
+
+        background: orange;
+        grid-column: 4/5;
+        grid-row: 2/4;
+      }
+
+      .div6 {
+        border-radius: 8px;
+
+        background: black;
+        grid-row: 4/5;
+        grid-column: 1/4;
+      }
+      .div7 {
+        border-radius: 8px;
+
+        background: black;
+        grid-column: 1/-1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="div1">Navbar</div>
+      <div class="div2">
+        Fixtures
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            dolore autem laborum, provident corporis non, dolorem ipsum eos
+            soluta similique odit blanditiis saepe? Deleniti nostrum beatae,
+            consequuntur deserunt neque vero.
+          </li>
+        </ul>
+      </div>
+      <div class="div3">
+        <figure>
+          <img src="msdhoni.jpg" />
+          <figcaption>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="div4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+        inventore quam similique laudantium quia sed reiciendis molestias dolore
+        sunt. Natus sunt atque ex, doloremque reiciendis ducimus laudantium
+        dignissimos sed dolorem suscipit esse repellendus omnis eaque
+        consequatur quibusdam quae totam cumque magnam. Molestias nesciunt quam
+        fugiat obcaecati mollitia sapiente officia voluptatibus.
+      </div>
+      <div class="div5">Headlines</div>
+      <div class="div6">Recent matches grid</div>
+      <div class="div7">Footer</div>
+    </main>
+  </body>
+</html>

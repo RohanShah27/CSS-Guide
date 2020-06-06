@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>grid template areas</title>
+    <style>
+      .wrapper {
+        width: 90%;
+        margin: auto auto;
+      }
+      .main-container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "fixtures news news headlines"
+          "fixtures news news headlines";
+      }
+      .fixtures {
+        border: 1px solid black;
+        border-radius: 8px;
+        grid-area: fixtures;
+        display: block;
+        /* word-wrap: break-word; */
+        /* overflow-wrap: break-word; */
+        height: 50%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .fixtures::-webkit-scrollbar {
+        display: none;
+      }
+      .fixtures h2 {
+        text-align: center;
+      }
+      .news {
+        border: 1px solid black;
+        grid-area: news;
+        height: 50%;
+      }
+      .headlines {
+        border: 1px solid black;
+        grid-area: headlines;
+        height: 50%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .headlines::-webkit-scrollbar {
+        display: none;
+      }
+      @media (max-width: 700px) {
+        .main-container {
+          grid-template-areas:
+            "fixtures"
+            "news"
+            "headlines";
+        }
+        .fixtures {
+          grid-area: fixtures;
+          height: 100%;
+        }
+        .news {
+          grid-area: news;
+        }
+        .headlines {
+          grid-area: headlines;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <div class="fixtures">
+          <h2>Fixtures</h2>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+          </ul>
+        </div>
+        <div class="news">
+          News
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+          </ul>
+        </div>
+        <div class="headlines">
+          Headlines
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur optio iusto magnam libero quasi distinctio veritatis
+              aspernatur itaque omnis nihil ratione, reiciendis excepturi. Iure
+              omnis repudiandae commodi fugit ad.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

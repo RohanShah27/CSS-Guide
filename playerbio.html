@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        width: 90%;
+        margin: 50px auto;
+        border: 1px solid black;
+        text-align: center;
+        color: white;
+        display: grid;
+        grid-template-rows: 100px 100px repeat(3, 200px);
+        grid-template-columns: 300px repeat(3, 2fr);
+        grid-gap: 10px;
+      }
+      img {
+        border-radius: 8px;
+      }
+
+      .div1 {
+        border-radius: 8px;
+        background: red;
+        grid-column: 1/ -1;
+      }
+      .div2 {
+        border-radius: 8px;
+
+        /* background: blue; */
+        grid-row: 2/4;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .div2::-webkit-scrollbar {
+        display: none;
+      }
+      .div2:hover::-webkit-scrollbar {
+        display: scroll;
+      }
+      .div3 {
+        border-radius: 8px;
+
+        background: green;
+        grid-row: 2/4;
+        grid-column: 2/-1;
+      }
+      .div4 {
+        border-radius: 8px;
+
+        background: blue;
+        grid-row: 4/6;
+        grid-column: 1/2;
+      }
+      .div5 {
+        border-radius: 8px;
+
+        background: orange;
+        grid-column: 2/-1;
+        grid-row: 4/6;
+      }
+
+      .div7 {
+        border-radius: 8px;
+        height: 500px;
+        background: black;
+        grid-column: 1/-1;
+        grid-row: 6/8;
+      }
+      .footer {
+        background: #f391f3;
+        grid-row: 8/9;
+        grid-column: 1/-1;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="div1">Navbar</div>
+      <div class="div2">
+        <img src="rohitsharma.jpg" />
+      </div>
+      <div class="div3">div 3Name and country</div>
+      <div class="div4">div 4 Personal Info</div>
+      <div class="div5">div 5Stats</div>
+      <div class="div7">div 7Graphs</div>
+      <div class="footer">Footer</div>
+    </main>
+  </body>
+</html>

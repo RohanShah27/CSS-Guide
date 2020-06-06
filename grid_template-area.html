@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 1000px;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        /* grid-template-rows: 50px 100px 100px auto; */
+        grid-template-rows: 50px auto auto 50px;
+        /* grid-template-rows:; */
+        grid-template-areas:
+          "nav nav nav nav"
+          "data data data ."
+          "data data data ads"
+          "footer footer footer footer";
+      }
+      .navigation {
+        background-color: aquamarine;
+        grid-area: nav;
+      }
+      .data {
+        background-color: blue;
+        grid-area: data;
+      }
+      .ads {
+        background-color: orange;
+        grid-area: ads;
+      }
+      .footer {
+        background-color: aqua;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">Navigation bar</div>
+      <div class="data">Data section</div>
+      <div class="ads">Ads</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
